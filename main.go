@@ -331,7 +331,7 @@ func main() {
 	searchRs := []string{"wss://relay.nostr.band"}
 	evs := findEvents(searchRs, nostr.Filter{
 		Kinds:  []int{nostr.KindTextNote},
-		Search: "#makeitquote",
+		Search: "#shinshin86_makeitquote",
 		Limit:  10,
 	})
 	if len(evs) == 0 {
@@ -346,7 +346,7 @@ func main() {
 		if slices.Contains(ids, id) {
 			continue
 		}
-		if !strings.Contains(ev.Content, "#makeitquote") {
+		if !strings.Contains(ev.Content, "#shinshin86_makeitquote") {
 			continue
 		}
 		fmt.Println(ev.ID)
